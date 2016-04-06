@@ -10,6 +10,10 @@ class Scrabble < Sinatra::Base
     erb :score
   end
 
+  post '/score' do
+    erb :score
+  end
+
   get '/score-many' do
     erb :score_many
   end
