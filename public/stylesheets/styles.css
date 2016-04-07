@@ -35,11 +35,12 @@ footer {
 /** Score Page **/
 
 .score-page h2 {
-  margin: 10rem auto;
+  margin: 10rem auto 5rem auto;
   text-align: center;
 }
 
 .score-form {
   width: 50%;
   margin: auto;
+  text-align: center;
 }

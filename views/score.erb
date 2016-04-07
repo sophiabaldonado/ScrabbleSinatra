@@ -2,12 +2,11 @@
   <h2>Scrabble Scorer</h2>
   <article class="score-form">
   <form action="" method="post">
-    <label for="word">Scrabble Word</label>
-    <input type="text" name="word" value="" id="word">
-    <input type="submit" value="SUBMIT WORD"
+    <label>Scrabble Word: <input type="text" name="word" value="" id="word"></label>
+    <input type="submit" value="SUBMIT WORD">
   </form>
   <% if @score %>
-    <p>The score is <%= @score %>!</p>
+    <p>The score for <%= params["word"] %> is <%= @score %>!</p>
   <% end %>
 
   <article>

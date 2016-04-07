@@ -1,6 +1,5 @@
 require 'sinatra'
 require_relative 'lib/scrabble'
-# require_relative '/lib/score'
 
 class SinatraScrabble < Sinatra::Base
 
