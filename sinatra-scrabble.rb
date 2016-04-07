@@ -16,6 +16,12 @@ class SinatraScrabble < Sinatra::Base
     erb :score
   end
 
+  post '/score-many' do
+    @user_words = params["words"].split(/ /)
+    @word_score_pairs = Scrabble::Scoring.word_score_pairs(@user_words)
+    erb :score_many
+  end
+
   get '/score-many' do
     erb :score_many
   end

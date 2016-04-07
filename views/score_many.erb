@@ -1,1 +1,24 @@
-<h1>COMING SO SOON YOU HAVE NO IDEA</h1>
+<section class="score-page">
+  <h2>Scrabble Scorer</h2>
+  <p>Please type each word seperated by spaces.</p>
+  <article class="score-form">
+    <form class="score-many-words" action="" method="post">
+        <label for="words">Score Multiple Words<label>
+        <textarea name="words" placeholder="Your words go here" id="words" rows="10" cols="50"></textarea>
+
+        <input type="submit" value="SCORE">
+    </form>
+
+    <section>
+      <% @word_score_pairs.each do |pair| %>
+        <div class="scored-word">
+          <p><%= pair[0] %></p>
+        </div>
+        <div class="score">
+          <p><%= pair[1] %></p>
+        </div>
+      <% end %>
+    </section>
+
+  </article>
+</section>
