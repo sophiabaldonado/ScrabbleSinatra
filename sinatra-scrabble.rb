@@ -17,13 +17,21 @@ class SinatraScrabble < Sinatra::Base
   end
 
   post '/score-many' do
-    @user_words = params["words"].split(/ /)
+    @user_words = params["words"].gsub(/[\n\r]+/, ' ')
+    @user_words = strip_words(@user_words).split(/ /)
     @word_score_pairs = Scrabble::Scoring.word_score_pairs(@user_words)
     erb :score_many
   end
 
   get '/score-many' do
     erb :score_many
+  end
+
+  helpers do
+    def strip_words(words_array)
+      words_array.gsub(/[^A-Za-z\s]/, '')
+    end
+
   end
 
   run!

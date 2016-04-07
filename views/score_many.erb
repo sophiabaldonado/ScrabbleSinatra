@@ -10,15 +10,20 @@
     </form>
 
     <section>
-      <% @word_score_pairs.each do |pair| %>
-        <div class="scored-word">
-          <p><%= pair[0] %></p>
-        </div>
-        <div class="score">
-          <p><%= pair[1] %></p>
-        </div>
+      <p>awdo22d ad;adaw ad.d/a dUmpling</p>
+      <% if @word_score_pairs %>
+        <% @word_score_pairs.each do |pair| %>
+          <div class="scored-word">
+            <p><%= pair[0] %></p>
+          </div>
+          <div class="score">
+            <p><%= pair[1] %></p>
+          </div>
+        <% end %>
       <% end %>
     </section>
+
+
 
   </article>
 </section>
