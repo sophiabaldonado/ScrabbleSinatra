@@ -1,6 +1,8 @@
 require 'sinatra'
+require_relative 'lib/scrabble'
+# require_relative '/lib/score'
 
-class Scrabble < Sinatra::Base
+class SinatraScrabble < Sinatra::Base
 
   get '/' do
     erb :index
@@ -11,6 +13,7 @@ class Scrabble < Sinatra::Base
   end
 
   post '/score' do
+    @score = Scrabble::Scoring.score(params["word"])
     erb :score
   end
 

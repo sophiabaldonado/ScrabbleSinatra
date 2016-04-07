@@ -3,8 +3,12 @@
   <article class="score-form">
   <form action="" method="post">
     <label for="word">Scrabble Word</label>
-    <input type="text" name="score" value="" id="name">
+    <input type="text" name="word" value="" id="word">
     <input type="submit" value="SUBMIT WORD"
   </form>
+  <% if @score %>
+    <p>The score is <%= @score %>!</p>
+  <% end %>
+
   <article>
 </section>
