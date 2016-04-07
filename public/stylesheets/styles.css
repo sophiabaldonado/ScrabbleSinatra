@@ -34,13 +34,25 @@ footer {
 
 /** Score Page **/
 
-.score-page h2 {
-  margin: 10rem auto 5rem auto;
+.score-page * {
+  display: block;
+  margin: auto;
   text-align: center;
+}
+
+.score-page h2 {
+  margin: 6rem auto 4rem auto;
 }
 
 .score-form {
   width: 50%;
-  margin: auto;
-  text-align: center;
+  /*mrgin: auto;*/
+}
+
+.score-many-words label {
+    font-size: 1.5rem;
+}
+
+.score-many-words textarea {
+  text-align: left;
 }
