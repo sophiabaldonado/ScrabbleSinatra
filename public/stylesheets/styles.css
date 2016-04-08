@@ -215,7 +215,9 @@ label.score-label {
 
 /** Score Page **/
 
-
+.score-space {
+  height: 2.2rem;
+}
 
 
 /** Score Many Page **/

@@ -1,12 +1,14 @@
 <section class="score-page">
   <h2>Scrabble Scorer</h2>
+  <% if @score %>
+    <p>The score for <%= params["word"] %> is <%= @score %>!</p>
+  <% else %>
+    <span class="score-space"></span>
+  <% end %>
   <article class="score-form">
   <form action="" method="post">
     <label class="score-label">Scrabble Word: <input class="score-textbox" type="text" name="word" value="" id="word" placeholder="word" required pattern="[A-Za-z]+"></label>
     <input class="score-button" type="submit" value="SCORE">
   </form>
   <article>
-  <% if @score %>
-    <p>The score for <%= params["word"] %> is <%= @score %>!</p>
-  <% end %>
 </section>
