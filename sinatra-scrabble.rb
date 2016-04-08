@@ -12,7 +12,12 @@ class SinatraScrabble < Sinatra::Base
   end
 
   post '/score' do
-    @score = Scrabble::Scoring.score(params["word"]) unless params["word"].empty?
+    score_word(params["word"])
+    erb :score
+  end
+
+  get '/score/:word' do
+    score_word(params[:word])
     erb :score
   end
 
@@ -36,6 +41,10 @@ class SinatraScrabble < Sinatra::Base
   helpers do
     def active_page?(path='')
       request.path_info == ('/' + path)
+    end
+
+    def score_word(word)
+      @score = Scrabble::Scoring.score(word) unless word.empty?
     end
 
   end
