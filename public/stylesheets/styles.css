@@ -66,22 +66,67 @@ a {
 }
 
 footer {
+  width: 100%;
   margin-top: 5rem;
+  padding: 1rem;
+  color: #B8D7D4;
   text-align: center;
   clear: both;
 }
 
 /** Home Page **/
 
-.cat-scrabble {
+.home-header {
+  height: 27rem;
+}
+
+
+.home-header h1 {
+  font-size: 5rem;
+  margin: 3rem;
+}
+
+.scrabble-about {
   width: 80%;
   margin: auto;
+  padding: 2rem;
 }
 
-.cat-scrabble img {
+.scrabble-about h2 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  color: #62A59E;
+}
+
+.first-letter {
+  color: #B8D7D4;
+  font-family: 'Merriweather', Georgia;
+  font-size: 1.8rem;
+}
+
+.scrabble-about p {
+  width: 85%;
+  float: left;
+}
+
+.scrabble-about figure {
+  width: 13%;
+  margin: 1rem auto;
+  float: right;
+  text-align: center;
+}
+
+.scrabble-about figure:hover {
+  transform: scale(1.1);
+}
+
+.scrabble-about figcaption {
+  color: #62A59E;
+}
+
+.scrabble-about img {
   width: 100%;
 }
-
 
 /** Score Page **/
 
