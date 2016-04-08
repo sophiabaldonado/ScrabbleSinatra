@@ -12,7 +12,7 @@ class SinatraScrabble < Sinatra::Base
   end
 
   post '/score' do
-    @score = Scrabble::Scoring.score(params["word"])
+    @score = Scrabble::Scoring.score(params["word"]) unless params["word"].empty?
     erb :score
   end
 
