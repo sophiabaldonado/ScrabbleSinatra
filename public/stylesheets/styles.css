@@ -153,12 +153,25 @@ footer {
 }
 
 .score-page h2 {
-  margin: 6rem auto 4rem auto;
+  margin: 2rem auto 3rem auto;
+  color: #62A59E;
 }
 
 .score-form {
   width: 50%;
-  /*mrgin: auto;*/
+}
+
+.score-textbox {
+  width: 35%;
+  transform: scale(2);
+  margin: 1.2rem auto;
+  border: .05rem solid #B8D7D4;
+  border-radius: .15rem;
+  background-color: #F5F4F4;
+}
+
+.score-textbox:focus {
+    background-color: #FFFFFF;
 }
 
 .score-many-words label {
