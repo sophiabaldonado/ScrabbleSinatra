@@ -1,7 +1,9 @@
 /**
 
   green: #62A59E
-  light green: #B8D7D4
+  lighter green: #66B6AE
+  lightest green: #B8D7D4
+  dark green: #269B8F
 
 **/
 
@@ -45,6 +47,26 @@ h1 {
 
 a {
   text-decoration: none;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.20s ease-in-out;
+  -moz-transition: all 0.20s ease-in-out;
+  -ms-transition: all 0.20s ease-in-out;
+  -o-transition: all 0.20s ease-in-out;
+  outline: none;
+  width: 35%;
+  transform: scale(2);
+  margin: 4.5rem auto;
+  border: .05rem solid #B8D7D4;
+  border-radius: .15rem;
+  background-color: #F3F3F3;
+}
+
+input[type=text]:focus, textarea:focus {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(146, 227, 218, 1);
+    border: 1px solid rgba(146, 227, 218, 1);
 }
 
 .top-nav {
@@ -148,7 +170,8 @@ footer {
 
 .score-page * {
   display: block;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -161,23 +184,37 @@ footer {
   width: 50%;
 }
 
-.score-textbox {
-  width: 35%;
-  transform: scale(2);
-  margin: 1.2rem auto;
-  border: .05rem solid #B8D7D4;
-  border-radius: .15rem;
-  background-color: #F5F4F4;
-}
-
-.score-textbox:focus {
-    background-color: #FFFFFF;
-}
-
-.score-many-words label {
+label.score-label {
     font-size: 1.5rem;
 }
 
 .score-many-words textarea {
   text-align: left;
 }
+
+.score-button {
+  width: 20%;
+  height: 2rem;
+  border: none;
+  border-radius: .25rem;
+  background-color: #62A59E;
+  box-shadow: 0 .2rem 0 0 #1E8076;
+  color: white;
+  font-family: 'Merriweather', Georgia;
+  font-size: 1rem;
+}
+
+.score-button:hover {
+  background-color: #66B6AE;
+}
+
+
+
+
+
+
+
+
+
+
+/** end **/
