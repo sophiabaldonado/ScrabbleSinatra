@@ -1,7 +1,5 @@
-<section class="score-page">
-  <h2>Scrabble Scorer</h2>
   <% if @score %>
-    <p>The score for <%= params["word"] %> is <%= @score %>!</p>
+    <p>The score for <%= params["word"].nil? ? params[:urlword] : params["word"] %> is <%= @score %>!</p>
   <% else %>
     <span class="score-space"></span>
   <% end %>
@@ -11,4 +9,3 @@
     <input class="score-button" type="submit" value="SCORE">
   </form>
   <article>
-</section>

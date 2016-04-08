@@ -17,7 +17,14 @@
       </nav>
     </header>
     <main>
+      <% if active_page?('score') || active_page?("score/#{params[:urlword]}") || active_page?('score-many') %>
+        <section class="score-page">
+          <h2>Scrabble Scorer</h2>
+      <% end %>
       <%= yield %>
+      <% if active_page?('score') || active_page?('score/:word') || active_page?('score-many') %>
+        </section>
+      <% end %>
     </main>
 
     <footer>
