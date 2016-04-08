@@ -34,5 +34,12 @@ class SinatraScrabble < Sinatra::Base
 
   end
 
+  helpers do
+    def active_page?(path='')
+      request.path_info == ('/' + path)
+    end
+
+  end
+
   run!
 end
