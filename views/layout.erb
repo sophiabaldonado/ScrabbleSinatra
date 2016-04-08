@@ -9,11 +9,11 @@
   </head>
 
   <body>
-    <header>
-      <a href="/"><h1>Scrabble <span class="accent">w/</span><br>Sinatra</h1></a>
+    <header class="<%= "home-header" if active_page?("") %>">
+      <a href="/"><h1>Scrabble <span class="accent">w/</span><%= "<br>" if active_page?("") %> Sinatra</h1></a>
       <nav class="top-nav">
-        <div><a href="/score">Score A Word</a></div>
-        <div><a href="/score-many">Score Multiple</a></div>
+        <a href="/score"><div class="<%= "current-page" if active_page?("score") %>">Score A Word</div></a>
+        <a href="/score-many"><div class="<%= "current-page" if active_page?("score-many") %>">Score Multiple</div></a>
       </nav>
     </header>
     <main>
