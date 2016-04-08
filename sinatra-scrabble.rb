@@ -28,8 +28,8 @@ class SinatraScrabble < Sinatra::Base
   end
 
   helpers do
-    def strip_words(words_array)
-      words_array.gsub(/[^A-Za-z\s]/, '')
+    def strip_words(user_words)
+      user_words.gsub(/[^A-Za-z\s]/, '')
     end
 
   end

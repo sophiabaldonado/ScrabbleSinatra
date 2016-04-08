@@ -57,7 +57,7 @@ class Scrabble::Scoring
 
   def self.word_scores(array_of_words)
     # word_scores stores the points of each word in the array_of_words
-    array_of_words.map { |word| score(word) }
+    array_of_words.map { |word| score(word) unless word.empty? }
     #=> Ex: TEST_WORD_ARRAY3 => [5, 20, 7, 20, 3, 70]
   end
 
