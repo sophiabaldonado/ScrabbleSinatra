@@ -193,39 +193,6 @@ footer {
   color: #62A59E;
 }
 
-.score-form {
-  width: 50%;
-}
-
-label.score-label {
-    font-size: 1.5rem;
-}
-
-.score-button {
-  width: 20%;
-  height: 2rem;
-  border: none;
-  border-radius: .25rem;
-  background-color: #62A59E;
-  box-shadow: 0 .2rem 0 0 #1E8076;
-  color: white;
-  font-family: 'Merriweather', Georgia;
-  font-size: 1rem;
-}
-
-.score-button:hover {
-  background-color: #66B6AE;
-  cursor: pointer;
-}
-
-.score-button:active {
-  transform: translate(0, .175rem);
-  -webkit-transform: translate(0px, .175rem);
-  box-shadow: 0 -.075rem 0 0 #1E8076;
-  box-shadow: 0 0 0 0 #1E8076;
-  outline: 0;
-}
-
 .display-scores {
   width: 50%;
   margin: 3rem auto;
@@ -254,6 +221,105 @@ label.score-label {
 
 .scored-word {
   border-right: .05rem solid #62A59E;
+}
+
+.score-form {
+  width: 50%;
+}
+
+label.score-label {
+    font-size: 1.5rem;
+}
+
+
+.letter-checkbox-label {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+}
+
+/** Working on pretty checkbox, argghhh!
+
+/*input[type=checkbox] {
+	opacity: 0;
+  appearance: none;
+}*/
+
+.letter-checkbox {
+  display: inline-block;
+  transform: scale(2);
+  margin: 0 1rem 0 0;
+}
+
+/*.letter-checkbox-label span {
+  cursor: pointer;
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0 .5rem -0.25rem 0;
+  background-color: #B8D7D4;
+  border-radius: .2rem;
+  position: relative;;
+  top: 0;
+  left: 0;
+  transition: all .2s ease;
+}
+
+.letter-checkbox-label span:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: .5rem;
+	height: .25rem;
+	background: transparent;
+	top: .35rem;
+	left: .35rem;
+	border: .2rem solid #333;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+.letter-checkbox-label span:hover::after {
+	opacity: 0.5;
+}
+
+.letter-checkbox:checked + .letter-checkbox-label span:after {
+	opacity: 1;
+  background-color: #62A59E;
+  color: white;
+}
+
+.letter-checkbox:active + .letter-checkbox-label span:after {
+	opacity: 1;
+  background-color: #62A59E;
+  color: white;
+}*/
+
+.score-button {
+  width: 20%;
+  height: 2rem;
+  border: none;
+  border-radius: .25rem;
+  background-color: #62A59E;
+  box-shadow: 0 .2rem 0 0 #1E8076;
+  color: white;
+  font-family: 'Merriweather', Georgia;
+  font-size: 1rem;
+}
+
+.score-button:hover {
+  background-color: #66B6AE;
+  cursor: pointer;
+}
+
+.score-button:active {
+  transform: translate(0, .175rem);
+  -webkit-transform: translate(0px, .175rem);
+  box-shadow: 0 -.075rem 0 0 #1E8076;
+  box-shadow: 0 0 0 0 #1E8076;
+  outline: 0;
 }
 
 /** Score Page **/
