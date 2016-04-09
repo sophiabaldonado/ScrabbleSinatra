@@ -1,25 +1,24 @@
-  <p>Please type each word seperated by spaces.</p>
-  <article class="score-form">
-    <form class="score-many-words" action="" method="post">
-        <label class="score-label" for="words">Score Multiple Words<label>
-        <textarea class="score-textbox score-many-textbox" name="words" placeholder="Enter your words here" id="words" rows="10" cols="50"></textarea>
+<% if @word_score_pairs %>
+  <div class="display-scores">
+    <section class="left score-header"><h3>WORD</h3></section>
+    <section class="left score-header"><h3>SCORE</h3></section>
+    <% @word_score_pairs.each do |pair| %>
+      <div class="scored-word left">
+        <p><%= pair[0] %></p>
+      </div>
+      <div class="score left">
+        <p><%= pair[1] %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
 
-        <input class="score-button" type="submit" value="SCORE">
-    </form>
+<p class="clear-both">Please type each word seperated by spaces.</p>
+<article class="score-form">
+  <form class="score-many-words" action="" method="post">
+      <label class="score-label" for="words">Score Multiple Words<label>
+      <textarea class="score-textbox score-many-textbox" name="words" placeholder="Enter your words here" id="words" rows="10" cols="50"></textarea>
 
-    <section>
-      <p>sample words: awdo22d ad;adaw ad.d/a dUmpling</p>
-      <% if @word_score_pairs %>
-        <% @word_score_pairs.each do |pair| %>
-          <div class="scored-word">
-            <p><%= pair[0] %></p>
-          </div>
-          <div class="score">
-            <p><%= pair[1] %></p>
-          </div>
-        <% end %>
-      <% end %>
-
-
-  </article>
-</section>
+      <input class="score-button" type="submit" value="SCORE">
+  </form>
+</article>

@@ -1,8 +1,9 @@
 /**
 
   green: #62A59E
-  lighter green: #66B6AE
-  lightest green: #B8D7D4
+  light green: #66B6AE
+  lighter green: #B8D7D4
+  lightest green: #E0F1F0
   dark green: #269B8F
 
 **/
@@ -101,6 +102,18 @@ div.current-page {
 
 .accent {
   color: #B8D7D4;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-both {
+  clear: both;
 }
 
 footer {
@@ -211,6 +224,36 @@ label.score-label {
   box-shadow: 0 -.075rem 0 0 #1E8076;
   box-shadow: 0 0 0 0 #1E8076;
   outline: 0;
+}
+
+.display-scores {
+  width: 50%;
+  margin: 3rem auto;
+  border: .05rem solid #62A59E;
+  overflow: auto;
+}
+
+.display-scores > div {
+  width: 50%;
+  margin: 0;
+}
+
+.display-scores div:nth-child(4n+2),
+.display-scores div:nth-child(4n+3) {
+  background-color: #E0F1F0;
+}
+
+.score-header {
+  width: 50%;
+  height: 4rem;
+  margin: 0;
+  padding: .2rem;
+  background-color: #62A59E;
+  color: white;
+}
+
+.scored-word {
+  border-right: .05rem solid #62A59E;
 }
 
 /** Score Page **/
