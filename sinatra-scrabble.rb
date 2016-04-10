@@ -19,11 +19,13 @@ class SinatraScrabble < Sinatra::Base
 
   get '/score/:urlword' do
     score_word(params[:urlword])
+    word_pairs([params[:urlword]])
     erb :score
   end
 
   post '/score/:urlword' do
     score_word(params["word"])
+    word_pairs([params["word"]])
     erb :score
   end
 

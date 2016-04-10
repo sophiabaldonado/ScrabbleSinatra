@@ -1,28 +1,5 @@
-<% if @word_score_pairs %>
-  <div class="display-scores">
-    <section class="left score-header"><h3>WORD</h3></section>
-    <section class="left score-header"><h3>SCORE</h3></section>
-    <% @word_score_pairs.each do |pair| %>
-      <div class="scored-word left">
-        <p><%= pair[0] %></p>
-      </div>
-      <div class="score left">
-        <p><%= pair[1] %></p>
-      </div>
-      <% if params["letter_breakdown"] %>
-        <% letter_breakdown(pair[0]) %>
-        <div class="left"><%= @letters %></div>
-        <div class="left"><%= @letter_points %></div>
-      <% end %>
-    <% end %>
-  </div>
-<% end %>
+<%= erb :score_table %>
 
-  <% if @score %>
-    <p>The score for <%= params["word"].nil? ? params[:urlword] : params["word"] %> is <%= @score %>!</p>
-  <% else %>
-    <span class="score-space"></span>
-  <% end %>
   <article class="score-form">
   <form action="" method="post">
     <label class="score-label">Scrabble Word: <input class="score-textbox" type="text" name="word" value="" id="word" placeholder="word" required pattern="[A-Za-z]+"></label>

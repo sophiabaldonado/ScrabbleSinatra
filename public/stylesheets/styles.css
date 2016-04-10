@@ -189,15 +189,28 @@ footer {
 }
 
 .score-page h2 {
-  margin: 2rem auto 3rem auto;
+  margin: 2rem auto;
   color: #62A59E;
 }
 
 .display-scores {
   width: 50%;
-  margin: 3rem auto;
+  margin: 2rem auto;
   border: .05rem solid #62A59E;
   overflow: auto;
+}
+
+.score-header {
+  width: 50%;
+  height: 3rem;
+  margin: 0;
+  padding: .2rem;
+  background-color: #62A59E;
+  color: white;
+}
+
+.score-header h3 {
+  margin-top: .8rem;
 }
 
 .display-scores > div {
@@ -210,13 +223,8 @@ footer {
   background-color: #E0F1F0;
 }
 
-.score-header {
-  width: 50%;
-  height: 4rem;
-  margin: 0;
-  padding: .2rem;
-  background-color: #62A59E;
-  color: white;
+.display-scores p {
+  margin: .5rem auto;
 }
 
 /*.scored-word {
