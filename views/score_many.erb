@@ -9,6 +9,11 @@
       <div class="score left">
         <p><%= pair[1] %></p>
       </div>
+      <% if params["letter_breakdown"] %>
+        <% letter_breakdown(pair[0]) %>
+        <div class="left"><%= @letters %></div>
+        <div class="left"><%= @letter_points %></div>
+      <% end %>
     <% end %>
   </div>
 <% end %>
@@ -23,5 +28,4 @@
 
       <input class="score-button" type="submit" value="SCORE">
   </form>
-  <%= params["letter_breakdown"] %>
 </article>

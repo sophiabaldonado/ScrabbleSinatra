@@ -13,6 +13,7 @@ class SinatraScrabble < Sinatra::Base
 
   post '/score' do
     score_word(params["word"])
+    word_pairs([params["word"]])
     erb :score
   end
 
@@ -28,7 +29,7 @@ class SinatraScrabble < Sinatra::Base
 
   post '/score-many' do
     @user_words = strip_words(params["words"]).split(/ /)
-    @word_score_pairs = Scrabble::Scoring.word_score_pairs(@user_words)
+    word_pairs(@user_words)
     erb :score_many
   end
 
@@ -50,6 +51,15 @@ class SinatraScrabble < Sinatra::Base
 
     def score_word(word)
       @score = Scrabble::Scoring.score(word) unless word.empty?
+    end
+
+    def letter_breakdown(word)
+      @letters = Scrabble::Scoring.word_letters(word).join(" - ")
+      @letter_points = Scrabble::Scoring.word_points(word).join(" - ")
+    end
+
+    def word_pairs(words)
+      @word_score_pairs = Scrabble::Scoring.word_score_pairs(words)
     end
 
   end
