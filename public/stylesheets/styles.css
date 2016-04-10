@@ -247,20 +247,20 @@ label.score-label {
   margin: 1rem auto;
 }
 
-/** Working on pretty checkbox, argghhh!
+/** Working on pretty checkbox, argghhh! **/
 
-/*input[type=checkbox] {
+input[type=checkbox] {
 	opacity: 0;
   appearance: none;
-}*/
+}
 
-.letter-checkbox {
+/*.letter-checkbox {
   display: inline-block;
   transform: scale(2);
   margin: 0 1rem 0 0;
-}
+}*/
 
-/*.letter-checkbox-label span {
+.letter-checkbox-label span {
   cursor: pointer;
   display: inline-block;
   width: 1.3rem;
@@ -303,7 +303,7 @@ label.score-label {
 	opacity: 1;
   background-color: #62A59E;
   color: white;
-}*/
+}
 
 .score-button {
   width: 20%;
